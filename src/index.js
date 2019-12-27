@@ -1,6 +1,11 @@
-import 'core-js/stable';
-import sum from './sum';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const greet = name => console.log(` Hello, ${name} `)
+function Root(){
+    return <h1>Hello, world.</h1>;
+}
 
-console.log(sum(12,4))
+ReactDOM.render(
+    <Root />,
+    document.getElementById('root')
+)
