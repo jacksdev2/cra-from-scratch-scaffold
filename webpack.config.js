@@ -14,6 +14,16 @@ module.exports = env => {
 
     return {
         mode: environment,
+        devServer: {
+            contentBase: PATH_DIST,
+            host: 'localhost',
+            port: 8080,
+            historyApiFallback: true,
+            overlay: {
+                errors: true,
+                warnings: true,
+            }
+        },
         entry: [
             path.join(PATH_SOURCE, './index.js')
         ],
